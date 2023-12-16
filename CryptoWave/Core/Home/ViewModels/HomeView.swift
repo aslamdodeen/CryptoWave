@@ -24,6 +24,7 @@ struct HomeView: View {
                     allCoinsList
                         .transition(.move(edge: .leading))
                 }
+                
                 if showPortfolio {
                     portfolioCoinsList
                         .transition(.move(edge: .trailing))

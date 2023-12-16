@@ -25,6 +25,7 @@
 		9EC577342B28B301005B3D27 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC577332B28B301005B3D27 /* Color.swift */; };
 		9EC5773A2B28E98C005B3D27 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC577392B28E98C005B3D27 /* HomeView.swift */; };
 		9EC5773E2B28F6A8005B3D27 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5773D2B28F6A8005B3D27 /* CircleButtonView.swift */; };
+		9EF9E4762B2E44CF003DED48 /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF9E4752B2E44CF003DED48 /* LocalFileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		9EC577332B28B301005B3D27 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		9EC577392B28E98C005B3D27 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9EC5773D2B28F6A8005B3D27 /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
+		9EF9E4752B2E44CF003DED48 /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				9EAD89172B2DC7F70027932D /* NetworkingManager.swift */,
+				9EF9E4752B2E44CF003DED48 /* LocalFileManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				9EA18C322B2CD91100727672 /* CoinRowView.swift in Sources */,
 				9EB217D82B2D881E007BCA84 /* HomeViewModel.swift in Sources */,
 				9EC577212B28B0FF005B3D27 /* ContentView.swift in Sources */,
+				9EF9E4762B2E44CF003DED48 /* LocalFileManager.swift in Sources */,
 				9EC5773A2B28E98C005B3D27 /* HomeView.swift in Sources */,
 				9EC0C88A2B2DDB9A004B644D /* CoinImageView.swift in Sources */,
 				9EC5771F2B28B0FF005B3D27 /* CryptoWaveApp.swift in Sources */,
