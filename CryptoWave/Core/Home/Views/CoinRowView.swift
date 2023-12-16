@@ -10,7 +10,6 @@ import SwiftUI
 struct CoinRowView: View {
     
     let coin:Coin
-    let showHoldingColor: Bool
     let showHoldingColumn: Bool
     
     var body: some View {
@@ -27,10 +26,10 @@ struct CoinRowView: View {
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
-    CoinRowView(coin:DeveloperPreview.instance.coin, showHoldingColor: true, showHoldingColumn: true)
+    CoinRowView(coin:DeveloperPreview.instance.coin, showHoldingColumn: true)
 }
 #Preview(traits: .sizeThatFitsLayout) {
-    CoinRowView(coin:DeveloperPreview.instance.coin, showHoldingColor: true, showHoldingColumn: true)
+    CoinRowView(coin:DeveloperPreview.instance.coin, showHoldingColumn: true)
         .preferredColorScheme(.dark)
 }
 
