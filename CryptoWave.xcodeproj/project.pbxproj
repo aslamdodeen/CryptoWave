@@ -13,6 +13,7 @@
 		9EA18C302B2B59DC00727672 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA18C2F2B2B59DC00727672 /* Coin.swift */; };
 		9EA18C322B2CD91100727672 /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA18C312B2CD91100727672 /* CoinRowView.swift */; };
 		9EA18C342B2CDAD700727672 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA18C332B2CDAD700727672 /* PreviewProvider.swift */; };
+		9EAD89182B2DC7F70027932D /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAD89172B2DC7F70027932D /* NetworkingManager.swift */; };
 		9EB217D82B2D881E007BCA84 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB217D72B2D881E007BCA84 /* HomeViewModel.swift */; };
 		9EC5771F2B28B0FF005B3D27 /* CryptoWaveApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5771E2B28B0FF005B3D27 /* CryptoWaveApp.swift */; };
 		9EC577212B28B0FF005B3D27 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC577202B28B0FF005B3D27 /* ContentView.swift */; };
@@ -30,6 +31,7 @@
 		9EA18C2F2B2B59DC00727672 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		9EA18C312B2CD91100727672 /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
 		9EA18C332B2CDAD700727672 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
+		9EAD89172B2DC7F70027932D /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		9EB217D72B2D881E007BCA84 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		9EC5771B2B28B0FF005B3D27 /* CryptoWave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoWave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EC5771E2B28B0FF005B3D27 /* CryptoWaveApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoWaveApp.swift; sourceTree = "<group>"; };
@@ -68,6 +70,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		9EAD89162B2DC7910027932D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9EAD89172B2DC7F70027932D /* NetworkingManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		9EC577122B28B0FF005B3D27 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				9EC5771E2B28B0FF005B3D27 /* CryptoWaveApp.swift */,
+				9EAD89162B2DC7910027932D /* Utilities */,
 				9EC577322B28B2E1005B3D27 /* Extensions */,
 				9E3861112B2DB0F0005D0FFA /* Services */,
 				9EA18C2E2B2B598C00727672 /* Models */,
@@ -247,6 +258,7 @@
 				9EC5771F2B28B0FF005B3D27 /* CryptoWaveApp.swift in Sources */,
 				9EC5773E2B28F6A8005B3D27 /* CircleButtonView.swift in Sources */,
 				9EC577342B28B301005B3D27 /* Color.swift in Sources */,
+				9EAD89182B2DC7F70027932D /* NetworkingManager.swift in Sources */,
 				9EA18C2D2B2B4C4900727672 /* CircleButtonAnimationView.swift in Sources */,
 				9EA18C342B2CDAD700727672 /* PreviewProvider.swift in Sources */,
 				9E9422682B2CF315008C3451 /* Double.swift in Sources */,
