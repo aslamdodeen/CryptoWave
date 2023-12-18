@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    
     @EnvironmentObject private var vm:HomeViewModel
     @State private var showPortfolio:Bool = false
     
@@ -18,11 +19,14 @@ struct HomeView: View {
             
             VStack {
                 HomeHeader
+                HomeStatsView(showPortfolio: $showPortfolio)
+                SearchBarView(searchText: $vm.searchText)
+                
                 columTitles
                 
                 if !showPortfolio {
                     allCoinsList
-                        .transition(.move(edge: .leading))
+                      .transition(.move(edge: .leading))
                 }
                 
                 if showPortfolio {
