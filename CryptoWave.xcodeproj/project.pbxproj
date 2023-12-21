@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9E3861132B2DB154005D0FFA /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3861122B2DB154005D0FFA /* CoinDataService.swift */; };
+		9E4423712B348A5900768488 /* PortfolioContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9E44236F2B348A5900768488 /* PortfolioContainer.xcdatamodeld */; };
+		9E4423732B348B4E00768488 /* PortfolioDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4423722B348B4E00768488 /* PortfolioDataService.swift */; };
 		9E9422682B2CF315008C3451 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9422672B2CF315008C3451 /* Double.swift */; };
 		9EA18C2D2B2B4C4900727672 /* CircleButtonAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA18C2C2B2B4C4900727672 /* CircleButtonAnimationView.swift */; };
 		9EA18C302B2B59DC00727672 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA18C2F2B2B59DC00727672 /* Coin.swift */; };
@@ -40,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		9E3861122B2DB154005D0FFA /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
+		9E4423702B348A5900768488 /* PortfolioContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PortfolioContainer.xcdatamodel; sourceTree = "<group>"; };
+		9E4423722B348B4E00768488 /* PortfolioDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDataService.swift; sourceTree = "<group>"; };
 		9E9422672B2CF315008C3451 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		9EA18C2C2B2B4C4900727672 /* CircleButtonAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimationView.swift; sourceTree = "<group>"; };
 		9EA18C2F2B2B59DC00727672 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 				9E3861122B2DB154005D0FFA /* CoinDataService.swift */,
 				9EC0C88B2B2DE02D004B644D /* CoinImageService.swift */,
 				9ED909A92B309F3700539476 /* MarketDataService.swift */,
+				9E4423722B348B4E00768488 /* PortfolioDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -98,6 +103,7 @@
 				9EA18C2F2B2B59DC00727672 /* Coin.swift */,
 				9ECA5D5E2B3066150065B9AD /* StatisticModel.swift */,
 				9ED909A72B3097EA00539476 /* MarketDataModel.swift */,
+				9E44236F2B348A5900768488 /* PortfolioContainer.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -300,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E4423712B348A5900768488 /* PortfolioContainer.xcdatamodeld in Sources */,
 				9ECA5D5F2B3066150065B9AD /* StatisticModel.swift in Sources */,
 				9E3861132B2DB154005D0FFA /* CoinDataService.swift in Sources */,
 				9EA18C322B2CD91100727672 /* CoinRowView.swift in Sources */,
@@ -327,6 +334,7 @@
 				9E9422682B2CF315008C3451 /* Double.swift in Sources */,
 				9EC0C88C2B2DE02D004B644D /* CoinImageService.swift in Sources */,
 				9EA18C302B2B59DC00727672 /* Coin.swift in Sources */,
+				9E4423732B348B4E00768488 /* PortfolioDataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +538,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9E44236F2B348A5900768488 /* PortfolioContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9E4423702B348A5900768488 /* PortfolioContainer.xcdatamodel */,
+			);
+			currentVersion = 9E4423702B348A5900768488 /* PortfolioContainer.xcdatamodel */;
+			path = PortfolioContainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9EC577132B28B0FF005B3D27 /* Project object */;
 }

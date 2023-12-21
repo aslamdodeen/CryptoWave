@@ -10,8 +10,8 @@ import Combine
 
 class HomeViewModel: ObservableObject {
     
-   @Published var statistics: [StatisticModel] = []
-
+    @Published var statistics: [StatisticModel] = []
+    
     
     @Published var allCoins:[Coin] = []
     @Published var portfolioCoins:[Coin] = []
@@ -20,14 +20,14 @@ class HomeViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     private let coinDataService = CoinDataService()
     private let marketDataService = MarketDataService()
-
+    private let portfolioDataService = PortfolioDataService()
     
     init() {
         addSubscribers()
     }
     
     func addSubscribers() {
-     // update allCoins
+        // update allCoins
         $searchText
             .combineLatest(coinDataService.$allCoins)
             .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
@@ -44,6 +44,29 @@ class HomeViewModel: ObservableObject {
                 self?.statistics = returnedStats
             }
             .store(in: &cancellables)
+        
+        // Updates Porfolio
+        $allCoins
+            .combineLatest(portfolioDataService.$savedEntites)
+            .map {(coin,portfolioEntities) -> [Coin] in
+                
+                coin
+                    .compactMap { currentCoin in
+                        guard let entity = portfolioEntities.first(where: {$0.coinID == currentCoin.id }) else {
+                            return nil
+                        }
+                        
+                        return currentCoin.updateHoldings(amount: entity.amount)
+                    }
+            }
+            .sink { [weak self] (returnedCoins) in
+                self?.portfolioCoins = returnedCoins
+            }
+            .store(in: &cancellables)
+    }
+    
+    func updatePortfolio(coin:Coin, amount: Double) {
+        portfolioDataService.updatePortfolio(coin: coin, amount: amount)
     }
     
     private func filterCoins(text: String, coins: [Coin]) -> [Coin] {
@@ -75,10 +98,10 @@ class HomeViewModel: ObservableObject {
         let portfolio = StatisticModel(title: "Portfolio Value", value: "$0.00",percentageChange: 0)
         
         stats.append(contentsOf: [
-          marketCap,
-          volume,
-          btcDominance,
-          portfolio
+            marketCap,
+            volume,
+            btcDominance,
+            portfolio
         ])
         return stats
     }
