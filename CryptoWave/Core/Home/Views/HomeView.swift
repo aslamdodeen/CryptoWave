@@ -13,6 +13,9 @@ struct HomeView: View {
     @State private var showPortfolio:Bool = false // animate right
     @State private var showPortfolioView:Bool = false // new sheet
     
+    @State private var selectedCoin:Coin? = nil
+    @State private var showDetailView:Bool = false
+    
     var body: some View {
         ZStack {
             Color.theme.background
@@ -41,6 +44,13 @@ struct HomeView: View {
                 Spacer(minLength: 0)
             }
         }
+        .background(
+            NavigationLink(
+                destination: DetailLoadingView(coin: $selectedCoin),
+                isActive: $showDetailView,
+                 label: { EmptyView()  })
+        )
+        
     }
 }
 
@@ -54,7 +64,6 @@ struct HomeView: View {
 
 
 extension HomeView {
-    
     private  var HomeHeader : some View {
         HStack {
             CircleButtonView(iconName: showPortfolio ? "plus" : "info")
@@ -89,9 +98,17 @@ extension HomeView {
             ForEach(vm.allCoins) { coin in
                 CoinRowView(coin: coin, showHoldingColumn: false)
                     .listRowInsets(.init(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 10)))
+                    .onTapGesture {
+                        segue(coin: coin)
+                    }
             }
         }
         .listStyle(PlainListStyle())
+    }
+    
+    private func segue(coin:Coin) {
+        selectedCoin = coin
+        showDetailView.toggle()
     }
     
     private var portfolioCoinsList: some View {
@@ -99,6 +116,9 @@ extension HomeView {
             ForEach(vm.portfolioCoins) { coin in
                 CoinRowView(coin: coin, showHoldingColumn: true)
                     .listRowInsets(.init(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 10)))
+                    .onTapGesture {
+                        segue(coin: coin)
+                    }
             }
         }
         .listStyle(PlainListStyle())
@@ -119,7 +139,6 @@ extension HomeView {
                     vm.sortOption = vm.sortOption == .rank ? .rankReversed : .rank
                 }
             }
-            
             Spacer()
             
         if showPortfolio {
@@ -159,9 +178,7 @@ extension HomeView {
                 Image(systemName: "goforward")
             }
             .rotationEffect(Angle(degrees: vm.isLoading ? 360 : 0),anchor: .center)
-            
         }
-        
         .padding(.horizontal)
         .font(.caption)
         .foregroundColor(Color.theme.secondaryText)
