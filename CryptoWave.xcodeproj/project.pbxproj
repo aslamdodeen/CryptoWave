@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E0B29F22B3761670033F833 /* CoinDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0B29F12B3761670033F833 /* CoinDetailModel.swift */; };
+		9E0B29F42B3771050033F833 /* CoinDetailDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0B29F32B3771050033F833 /* CoinDetailDataService.swift */; };
+		9E0B29F62B378CE30033F833 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0B29F52B378CE30033F833 /* DetailViewModel.swift */; };
 		9E3861132B2DB154005D0FFA /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3861122B2DB154005D0FFA /* CoinDataService.swift */; };
 		9E4423712B348A5900768488 /* PortfolioContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9E44236F2B348A5900768488 /* PortfolioContainer.xcdatamodeld */; };
 		9E4423732B348B4E00768488 /* PortfolioDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4423722B348B4E00768488 /* PortfolioDataService.swift */; };
@@ -42,6 +45,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E0B29F12B3761670033F833 /* CoinDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailModel.swift; sourceTree = "<group>"; };
+		9E0B29F32B3771050033F833 /* CoinDetailDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailDataService.swift; sourceTree = "<group>"; };
+		9E0B29F52B378CE30033F833 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		9E3861122B2DB154005D0FFA /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
 		9E4423702B348A5900768488 /* PortfolioContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PortfolioContainer.xcdatamodel; sourceTree = "<group>"; };
 		9E4423722B348B4E00768488 /* PortfolioDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDataService.swift; sourceTree = "<group>"; };
@@ -92,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				9E3861122B2DB154005D0FFA /* CoinDataService.swift */,
+				9E0B29F32B3771050033F833 /* CoinDetailDataService.swift */,
 				9EC0C88B2B2DE02D004B644D /* CoinImageService.swift */,
 				9ED909A92B309F3700539476 /* MarketDataService.swift */,
 				9E4423722B348B4E00768488 /* PortfolioDataService.swift */,
@@ -103,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				9EA18C2F2B2B59DC00727672 /* Coin.swift */,
+				9E0B29F12B3761670033F833 /* CoinDetailModel.swift */,
 				9ECA5D5E2B3066150065B9AD /* StatisticModel.swift */,
 				9ED909A72B3097EA00539476 /* MarketDataModel.swift */,
 				9E44236F2B348A5900768488 /* PortfolioContainer.xcdatamodeld */,
@@ -259,6 +267,7 @@
 		9EE30FEB2B371E9B003A7BC3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				9E0B29F52B378CE30033F833 /* DetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -341,6 +350,7 @@
 				9EB217D82B2D881E007BCA84 /* HomeViewModel.swift in Sources */,
 				9EF9E4762B2E44CF003DED48 /* LocalFileManager.swift in Sources */,
 				9ED909A82B3097EA00539476 /* MarketDataModel.swift in Sources */,
+				9E0B29F22B3761670033F833 /* CoinDetailModel.swift in Sources */,
 				9EC5773A2B28E98C005B3D27 /* HomeView.swift in Sources */,
 				9ECA5D612B306A480065B9AD /* StatisticView.swift in Sources */,
 				9EC0C88A2B2DDB9A004B644D /* CoinImageView.swift in Sources */,
@@ -361,7 +371,9 @@
 				9ED909AC2B31D88200539476 /* PortfolioView.swift in Sources */,
 				9E9422682B2CF315008C3451 /* Double.swift in Sources */,
 				9EC0C88C2B2DE02D004B644D /* CoinImageService.swift in Sources */,
+				9E0B29F42B3771050033F833 /* CoinDetailDataService.swift in Sources */,
 				9EA18C302B2B59DC00727672 /* Coin.swift in Sources */,
+				9E0B29F62B378CE30033F833 /* DetailViewModel.swift in Sources */,
 				9E4423732B348B4E00768488 /* PortfolioDataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
