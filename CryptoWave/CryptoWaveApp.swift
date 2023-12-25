@@ -22,6 +22,7 @@ struct CryptoWaveApp: App {
             NavigationView {
                 HomeView()
                     .navigationBarHidden(true)
+                    .navigationBarTitleDisplayMode(.large)
             }
             .environmentObject(vm)
         }

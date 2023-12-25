@@ -118,9 +118,9 @@ class HomeViewModel: ObservableObject {
         switch sortOption {
         
         case .holdings:
-            return coins.sorted(by: {$0.currentHoldingsvalue > $1.currentHoldingsvalue})
+            return coins.sorted(by: {$0.currentHoldingsValue > $1.currentHoldingsValue})
         case .holdingsRevered:
-            return coins.sorted(by: {$0.currentHoldingsvalue < $1.currentHoldingsvalue})
+            return coins.sorted(by: {$0.currentHoldingsValue < $1.currentHoldingsValue})
 
         default : return coins
       
@@ -154,13 +154,13 @@ class HomeViewModel: ObservableObject {
         
         let portfolioValue =
         portfolioCoins
-            .map({$0.currentHoldingsvalue})
+            .map({$0.currentHoldingsValue})
             .reduce(0, +)
         
         let previousValue =
         portfolioCoins
             .map { coin -> Double in
-                let currentValue = coin.currentHoldingsvalue
+                let currentValue = coin.currentHoldingsValue
                 let percentChange = coin.priceChangePercentage24H ?? 0 / 100
                 let previousValue = currentValue / (1 + percentChange)
                 return previousValue

@@ -27,7 +27,7 @@ class DeveloperPreview {
     let stat2 = StatisticModel(title: "Total Volume", value: "$1.23Tr")
     let stat3 = StatisticModel(title: "Portfolio Value", value: "$50.4k",percentageChange: -12.34)
 
-    let coin = Coin(id: "bitcoin",
+    let coin = Coin(id: "vet",
                     symbol: "btc",
                     name: "Bitcoin",
                     image: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1696501400",
@@ -52,7 +52,7 @@ class DeveloperPreview {
                     atlChangePercentage: 90020.24075,
                     atlDate: "2013-07-06T00:00:00.000Z",
                     lastUpdated: "2014-07-06T00:00:00.000Z",
-                    sparklineIn7D: SparklineIn7D(price: [2384723742374892374,2384324,2343244]),
+                    sparklineIn7D: SparklineIn7D(price: [2384723742374892374,238324,2343244,2384723742374892374,2384324,2343244,238475742374892374,234324,2343244,2384723742374892374,2343244,2384723742374892374]),
                     priceChangePercentage24HInCurrency: 3432.43,
                     currentHoldings: 1.5)
 }
