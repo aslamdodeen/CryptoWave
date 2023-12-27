@@ -12,7 +12,7 @@ struct HomeView: View {
     @EnvironmentObject private var vm:HomeViewModel
     @State private var showPortfolio:Bool = false // animate right
     @State private var showPortfolioView:Bool = false // new sheet
-    
+    @State private var showSettingsView: Bool = false
     @State private var selectedCoin:Coin? = nil
     @State private var showDetailView:Bool = false
     
@@ -24,7 +24,6 @@ struct HomeView: View {
                     PortfolioView()
                         .environmentObject(vm)
                 })
-            
             VStack {
                 HomeHeader
                 HomeStatsView(showPortfolio: $showPortfolio)
@@ -36,19 +35,21 @@ struct HomeView: View {
                     allCoinsList
                         .transition(.move(edge: .leading))
                 }
-                
                 if showPortfolio {
                     portfolioCoinsList
                         .transition(.move(edge: .trailing))
                 }
                 Spacer(minLength: 0)
             }
+            .sheet(isPresented: $showSettingsView, content: {
+                SettingsView()
+            })
         }
         .background(
             NavigationLink(
                 destination: DetailLoadingView(coin: $selectedCoin),
                 isActive: $showDetailView,
-                 label: { EmptyView()  })
+                label: { EmptyView()  })
         )
         
     }
@@ -69,11 +70,15 @@ extension HomeView {
             CircleButtonView(iconName: showPortfolio ? "plus" : "info")
                 .animation(.none)
                 .onTapGesture {
-                    showPortfolioView.toggle()
+                    if showPortfolio {
+                        showPortfolioView.toggle()
+                        
+                    } else {
+                        showSettingsView.toggle()
+                    }
                 }
                 .background(
-                    CircleButtonAnimationView(animate: $showPortfolio)
-                )
+                    CircleButtonAnimationView(animate: $showPortfolio))
             Spacer()
             Text(showPortfolio ? "Protfolio":"Live Prices")
                 .font(.headline)
@@ -127,7 +132,6 @@ extension HomeView {
     
     private var columTitles: some View {
         HStack {
-            
             HStack(spacing:4) {
                 Text("Coin")
                 Image(systemName: "chevron.down")
@@ -141,8 +145,7 @@ extension HomeView {
                 }
             }
             Spacer()
-            
-        if showPortfolio {
+            if showPortfolio {
                 HStack(spacing:4) {
                     Text("Holdings")
                     Image(systemName: "chevron.down")
@@ -156,7 +159,6 @@ extension HomeView {
                     }
                 }
             }
-            
             HStack(spacing:4) {
                 Text("Price")
                 Image(systemName: "chevron.down")
@@ -170,7 +172,6 @@ extension HomeView {
                     vm.sortOption = vm.sortOption == .price ? .priceReversed : .price
                 }
             }
-            
             Button {
                 withAnimation(.linear(duration: 2.0)) {
                     vm.reloadData()
