@@ -16,6 +16,8 @@
 		9E4423712B348A5900768488 /* PortfolioContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9E44236F2B348A5900768488 /* PortfolioContainer.xcdatamodeld */; };
 		9E4423732B348B4E00768488 /* PortfolioDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4423722B348B4E00768488 /* PortfolioDataService.swift */; };
 		9E9422682B2CF315008C3451 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9422672B2CF315008C3451 /* Double.swift */; };
+		9E9B458C2B3C66BE00B9568B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E9B458B2B3C66BE00B9568B /* LaunchScreen.storyboard */; };
+		9E9B458E2B3C68A400B9568B /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9B458D2B3C68A400B9568B /* LaunchView.swift */; };
 		9EA18C2D2B2B4C4900727672 /* CircleButtonAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA18C2C2B2B4C4900727672 /* CircleButtonAnimationView.swift */; };
 		9EA18C302B2B59DC00727672 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA18C2F2B2B59DC00727672 /* Coin.swift */; };
 		9EA18C322B2CD91100727672 /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA18C312B2CD91100727672 /* CoinRowView.swift */; };
@@ -58,6 +60,8 @@
 		9E4423702B348A5900768488 /* PortfolioContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PortfolioContainer.xcdatamodel; sourceTree = "<group>"; };
 		9E4423722B348B4E00768488 /* PortfolioDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDataService.swift; sourceTree = "<group>"; };
 		9E9422672B2CF315008C3451 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		9E9B458B2B3C66BE00B9568B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9E9B458D2B3C68A400B9568B /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		9EA18C2C2B2B4C4900727672 /* CircleButtonAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimationView.swift; sourceTree = "<group>"; };
 		9EA18C2F2B2B59DC00727672 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		9EA18C312B2CD91100727672 /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
@@ -112,6 +116,23 @@
 				9E4423722B348B4E00768488 /* PortfolioDataService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		9E9B45892B3C664F00B9568B /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				9E9B458A2B3C667A00B9568B /* Views */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		9E9B458A2B3C667A00B9568B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9E9B458B2B3C66BE00B9568B /* LaunchScreen.storyboard */,
+				9E9B458D2B3C68A400B9568B /* LaunchView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		9EA18C2E2B2B598C00727672 /* Models */ = {
@@ -217,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				9EC5773B2B28F646005B3D27 /* Components */,
+				9E9B45892B3C664F00B9568B /* Launch */,
 				9EC577382B28E942005B3D27 /* Home */,
 				9EE30FE92B371E36003A7BC3 /* Detail */,
 				9EBA50952B3B900600F8A7B6 /* Settings */,
@@ -358,6 +380,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E9B458C2B3C66BE00B9568B /* LaunchScreen.storyboard in Resources */,
 				9EC577312B28B204005B3D27 /* Assets.xcassets in Resources */,
 				9EC577262B28B100005B3D27 /* Preview Assets.xcassets in Resources */,
 			);
@@ -377,6 +400,7 @@
 				9ED909AE2B31E1C200539476 /* XMarkButton.swift in Sources */,
 				9EB217D82B2D881E007BCA84 /* HomeViewModel.swift in Sources */,
 				9EBA50982B3B911500F8A7B6 /* SettingsView.swift in Sources */,
+				9E9B458E2B3C68A400B9568B /* LaunchView.swift in Sources */,
 				9EF9E4762B2E44CF003DED48 /* LocalFileManager.swift in Sources */,
 				9ED909A82B3097EA00539476 /* MarketDataModel.swift in Sources */,
 				9E0B29F22B3761670033F833 /* CoinDetailModel.swift in Sources */,
@@ -545,7 +569,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -573,7 +597,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
