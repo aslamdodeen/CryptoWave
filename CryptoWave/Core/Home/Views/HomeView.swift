@@ -36,7 +36,13 @@ struct HomeView: View {
                         .transition(.move(edge: .leading))
                 }
                 if showPortfolio {
-                    portfolioCoinsList
+                    ZStack(alignment:.top) {
+                        if vm.portfolioCoins.isEmpty && vm.searchText.isEmpty {
+                            portfolioEmptyText
+                        } else {
+                            portfolioCoinsList
+                        }
+                    }
                         .transition(.move(edge: .trailing))
                 }
                 Spacer(minLength: 0)
@@ -107,6 +113,8 @@ extension HomeView {
                         segue(coin: coin)
                         print(coin.sparklineIn7D?.price)
                     }
+                    .listRowBackground(Color.theme.background)
+
             }
         }
         .listStyle(PlainListStyle())
@@ -125,9 +133,25 @@ extension HomeView {
                     .onTapGesture {
                         segue(coin: coin)
                     }
+                    .listRowBackground(Color.theme.background)
             }
         }
         .listStyle(PlainListStyle())
+    }
+    
+    private var portfolioEmptyText: some View {
+        VStack {
+            Text("Your portfolio is feeling a bit lonely! Give it a touch of magic! 🌟 ")
+                .foregroundColor(Color.theme.accent)
+
+            Text("Click the + button, and watch your portfolio bloom with excitement! 🤗")
+                .foregroundColor(Color.theme.green )
+
+        }
+        .font(.body)
+        .fontWeight(.medium)
+        .multilineTextAlignment(.center)
+    .padding(50)
     }
     
     private var columTitles: some View {
